@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='angularService'>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Services</title>
+</head>
+<body>
+	<section ng-controller="firstCtrl">
+		<header id="header" class="">
+			<h1>FIRST EXAMPLE</h1>
+		</header><!-- /header -->
+		<input type='text' ng-model='userFirstName', placeholder='first name'>
+		<button ng-click='addUser()'>Add user</button>
+		<div ng-repeat='user in users'>
+			{{ user }}
+		</div>
+	</section>
+
+
+	<section ng-controller='secondCtrl'>
+		<header id="header" class="">
+			<h1>SECOND EXAMPLE</h1>
+		</header><!-- /header -->
+		<form>
+	 	<input type='text' ng-model='artist', placeholder='artist'>
+	 	<input type='text' ng-model='genre', placeholder='genre'>
+	 	<input type='text' ng-model='rating', placeholder='rating'>
+	 	<button ng-click="addArtist()">Add Artist</button>
+	 	</form>
+	 	<!-- <section> -->
+	 		<div ng-repeat='artist in reallyLike'>
+	 			<h3>Really Like</h3>
+	 			{{ artist.name }}
+	 			{{ artist.genre }}
+	 			{{ artist.rating }}
+	 		</div>
+	 		<div ng-repeat='artist in kindOfLike'>
+	 			<h3>Kind Of Like</h3>
+	 			{{ artist.name }}
+	 			{{ artist.genre }}
+	 			{{ artist.rating }}
+	 		</div>
+	 	<!-- </section> -->
+
+
+	</section>
+	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src='app.js'></script>
+	<script src='firstCtrl.js'></script>
+	<script src='secondCtrl.js'></script>
+	<script src='firstSrv.js'></script>
+	<script src='secondSrv.js'></script>
+</body>
+</html>
